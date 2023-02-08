@@ -6,7 +6,7 @@ target 'FirebaseLink' do
   use_frameworks!
 
   # Pods for FirebaseLink
-pod 'Firebase/Analytics'
-pod 'Firebase/Auth'
+
+
 
 end

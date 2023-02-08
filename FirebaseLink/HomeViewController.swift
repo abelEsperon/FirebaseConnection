@@ -17,7 +17,7 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var closeSesionButton: UIButton!
-    
+
     private let email: String
     private let provider: ProviderType
 

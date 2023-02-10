@@ -110,13 +110,13 @@
 				DCB56C9C298C1F0100BED88E /* AppDelegate.swift */,
 				DCB56C9E298C1F0100BED88E /* SceneDelegate.swift */,
 				DC76DCE3298C7EFC004578F2 /* HomeViewController.swift */,
+				DCB4565329938EF000B42FAF /* HomeViewController.xib */,
 				DCB56CA0298C1F0100BED88E /* AuthViewController.swift */,
 				DCB56CA2298C1F0100BED88E /* Main.storyboard */,
 				DCB56CA5298C1F0300BED88E /* Assets.xcassets */,
 				DCB56CA7298C1F0300BED88E /* LaunchScreen.storyboard */,
 				DCB56CAA298C1F0300BED88E /* Info.plist */,
 				DCB56CB0298C253700BED88E /* GoogleService-Info.plist */,
-				DCB4565329938EF000B42FAF /* HomeViewController.xib */,
 			);
 			path = FirebaseLink;
 			sourceTree = "<group>";

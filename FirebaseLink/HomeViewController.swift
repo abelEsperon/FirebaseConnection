@@ -43,15 +43,15 @@ class HomeViewController: UIViewController{
 
     
     @IBAction func closeSesionButtonAction(_ sender: Any) {
-//        switch provider {
-//        case .basic:
-//            do {
-//                try Auth.auth().signOut()
-//                navigationController?.popViewController(animated: true)
-//            } catch {
-//             //Se ha producido un error
-//            }
-//        }
+        switch provider {
+        case .basic:
+            do {
+                try Auth.auth().signOut()
+                navigationController?.popViewController(animated: true)
+            } catch {
+             //Se ha producido un error
+            }
+        }
     }
 
 }

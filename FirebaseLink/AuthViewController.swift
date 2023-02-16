@@ -16,6 +16,10 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     
+    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var AuthStackView: UIStackView!
+    
+    
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,16 @@ class AuthViewController: UIViewController {
         title = "Authentication"
         // Do any additional setup after loading the view.
         Analytics.logEvent("InitScreen", parameters: ["message":"Integracion de Firebase"])
+        
+        // Comporbar la sesion del usuario autenticado,
+        let defaults = UserDefaults.standard
+        if let email = defaults.value(forKey: "email") as? String,
+           let provider = defaults.value(forKey: "provider") as? String {
+            
+            AuthStackView.isHidden = true
+            navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
+        }
+        
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -63,6 +77,10 @@ class AuthViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func googleButtonAction(_ sender: Any) {
+        
     }
     
 

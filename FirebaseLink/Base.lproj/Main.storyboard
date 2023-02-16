@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wcf-GZ-l6F">
-                                <rect key="frame" x="25" y="120" width="343" height="136"/>
+                                <rect key="frame" x="25" y="120" width="343" height="184"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e56-ik-GGD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -59,6 +59,17 @@
                                             <constraint firstAttribute="height" constant="40" id="Xbz-M3-ca5"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-s3-W8O">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="google" imagePlacement="leading" title="Google" imagePadding="4">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                            <color key="baseForegroundColor" red="0.1806861162" green="0.2185859382" blue="0.28236192459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="googleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8n-Dz-uvf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -73,7 +84,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="k6L-FU-z08"/>
                     <connections>
+                        <outlet property="AuthStackView" destination="wcf-GZ-l6F" id="FPr-ou-A0o"/>
                         <outlet property="emailTextField" destination="e56-ik-GGD" id="MXc-rc-BWD"/>
+                        <outlet property="googleButton" destination="GfK-s3-W8O" id="gmA-G4-sDP"/>
                         <outlet property="logInButton" destination="PtF-uI-Lwv" id="iaQ-rJ-aAK"/>
                         <outlet property="passwdTextField" destination="dMU-kR-WYc" id="ilI-vu-ZW1"/>
                         <outlet property="signUpButton" destination="eub-jZ-fOD" id="kLo-WF-jMb"/>
@@ -81,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="13"/>
+            <point key="canvasLocation" x="1325.9541984732823" y="12.67605633802817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O4X-pJ-d43">
@@ -101,6 +114,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="google" width="36" height="36"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

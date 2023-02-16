@@ -8,5 +8,7 @@ target 'FirebaseLink' do
   # Pods for FirebaseLink
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
+# the commit.
 end

@@ -10,6 +10,7 @@ import FirebaseAuth
 
 enum ProviderType: String {
     case basic
+    case google
 }
 
 class HomeViewController: UIViewController{
@@ -36,22 +37,33 @@ class HomeViewController: UIViewController{
         
         title = "Inicio"
         
+        navigationItem.setHidesBackButton(true, animated: false)
         emailLabel.text = email
         providerLabel.text = provider.rawValue
-        // Do any additional setup after loading the view.
+        
+        // Guardamos datos del usuario
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "email")
+        defaults.set(provider.rawValue, forKey: "provider")
+        defaults.synchronize()
     }
 
     
     @IBAction func closeSesionButtonAction(_ sender: Any) {
-//        switch provider {
-//        case .basic:
-//            do {
-//                try Auth.auth().signOut()
-//                navigationController?.popViewController(animated: true)
-//            } catch {
-//             //Se ha producido un error
-//            }
-//        }
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
+        switch provider {
+        case .basic, .google:
+            do {
+                try Auth.auth().signOut()
+                navigationController?.popViewController(animated: true)
+            } catch {
+             //Se ha producido un error
+            }
+        }
     }
 
 }

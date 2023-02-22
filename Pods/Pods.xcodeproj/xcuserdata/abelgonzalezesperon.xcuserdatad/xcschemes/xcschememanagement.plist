@@ -4,13 +4,18 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+<<<<<<< HEAD
 		<key>AppAuth.xcscheme</key>
+=======
+		<key>Pods-FirebaseLink.xcscheme</key>
+>>>>>>> connection
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+<<<<<<< HEAD
 		<key>Firebase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -116,6 +121,8 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+=======
+>>>>>>> connection
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict/>

@@ -14,7 +14,7 @@
                 <outlet property="closeSesionButton" destination="J3D-Fn-07H" id="Dki-VF-9Hq"/>
                 <outlet property="emailLabel" destination="nSW-73-g25" id="4dq-sJ-8Oh"/>
                 <outlet property="providerLabel" destination="QOR-sA-NA3" id="tfa-E4-BsZ"/>
-                <outlet property="view" destination="iN0-l3-epB" id="aOt-1y-wrJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="z6H-bv-6Ph"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

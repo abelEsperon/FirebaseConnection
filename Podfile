@@ -6,9 +6,14 @@ target 'FirebaseLink' do
   use_frameworks!
 
   # Pods for FirebaseLink
+<<<<<<< HEAD
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
+=======
+
+
+>>>>>>> connection
 
 # the commit.
 end

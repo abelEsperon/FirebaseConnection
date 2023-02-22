@@ -19,7 +19,7 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var closeSesionButton: UIButton!
-    
+
     private let email: String
     private let provider: ProviderType
 
@@ -51,6 +51,7 @@ class HomeViewController: UIViewController{
 
     
     @IBAction func closeSesionButtonAction(_ sender: Any) {
+
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "email")
         defaults.removeObject(forKey: "provider")
@@ -76,7 +77,5 @@ class HomeViewController: UIViewController{
         } catch {
             //Se ha producido un error
         }
-    
     }
-
 }

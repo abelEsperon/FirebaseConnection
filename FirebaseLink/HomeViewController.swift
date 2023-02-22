@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
 enum ProviderType: String {
     case basic
@@ -56,14 +57,26 @@ class HomeViewController: UIViewController{
         defaults.synchronize()
         
         switch provider {
-        case .basic, .google:
-            do {
-                try Auth.auth().signOut()
-                navigationController?.popViewController(animated: true)
-            } catch {
-             //Se ha producido un error
+        case .basic:
+            firebaseLogOut()
+                
+        case .google:
+            
+            GIDSignIn.sharedInstance.signOut()
+            firebaseLogOut()
             }
+            navigationController?.popViewController(animated: true)
+        
         }
+    
+    private func firebaseLogOut(){
+        
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            //Se ha producido un error
+        }
+    
     }
 
 }

@@ -37,9 +37,9 @@ class AuthViewController: UIViewController {
             AuthStackView.isHidden = true
             navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
         }
-        
+
         // Google Auth
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.presentedViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
         
     }
@@ -50,23 +50,13 @@ class AuthViewController: UIViewController {
         
     }
 
-    
     @IBAction func signUpButtonAction(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwdTextField.text {
             Auth.auth() .createUser(withEmail: email, password: password) {
                 (result, error) in
 
-                if let result = result, error == nil {
-
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email:
-                                                                result.user .email!, provider: .basic), animated: true)
-                } else {
-                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title:"Aceptar", style: .default))
-                    self.present (alertController, animated: true, completion: nil)
-                }
+                self.showHome(result: result, error: error, provider: .basic)
             }
         }
     }
@@ -77,36 +67,44 @@ class AuthViewController: UIViewController {
             Auth.auth() .signIn(withEmail: email, password: password) {
                 (result, error) in
 
-                if let result = result, error == nil {
-
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email:
-                                                                result.user .email!, provider: .basic), animated: true)
-                } else {
-                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title:"Aceptar", style: .default))
-                    self.present (alertController, animated: true, completion: nil)
-                }
+                self.showHome(result: result, error: error, provider: .basic)
             }
         }
     }
     
     @IBAction func googleButtonAction(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signOut()
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    private func showHome (result: AuthDataResult?, error: Error?, provider: ProviderType) {
+        if let result = result, error == nil {
+
+            self.navigationController?.pushViewController(HomeViewController(email:
+                result.user .email!, provider: provider), animated: true)
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticacion mediante \(provider.rawValue)", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title:"Aceptar", style: .default))
+            self.present (alertController, animated: true, completion: nil)
+        }
         
     }
     
-extension AuthViewController: GIDSignDelegate {
+extension AuthViewController: GIDSignInDelegate {
+    
     func sing(_ signIn: GIDSignIn!, didSignInFor user: GIDSignIn!, withError error: Error!) {
+        
         if error == nil && user.authentication != nil {
+        
             let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
             
-            Auth.auth().signIn(with: credential) { (AuthDataResult?, Error? ) in
+            Auth.auth().signIn(with: credential) { (result, error ) in
                 
+                self.showHome(result: result, error: error, provider: .google)
+                
+                }
             }
         }
     }
-    
-    }
 
 }
-

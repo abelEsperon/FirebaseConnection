@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 PODS:
   - AppAuth (1.6.0):
     - AppAuth/Core (= 1.6.0)
@@ -142,9 +141,6 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 55c740c6fb1cea56ddff58cf0fdbc68aabde4322
-=======
-PODFILE CHECKSUM: 5b4752a262f19b7349374a583aa3e1407b098e31
->>>>>>> connection
+PODFILE CHECKSUM: c6f3a6138d40bece5e5d36f366c07f37cbc3ce72
 
 COCOAPODS: 1.11.3

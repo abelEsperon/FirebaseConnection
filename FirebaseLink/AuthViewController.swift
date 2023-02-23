@@ -18,6 +18,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     
     @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var AuthStackView: UIStackView!
     
     
@@ -76,6 +77,11 @@ class AuthViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signOut()
         GIDSignIn.sharedInstance()?.signIn()
     }
+    
+    @IBAction func facebookButtonAction(_ sender: Any) {
+        
+    }
+    
     
     private func showHome (result: AuthDataResult?, error: Error?, provider: ProviderType) {
         if let result = result, error == nil {

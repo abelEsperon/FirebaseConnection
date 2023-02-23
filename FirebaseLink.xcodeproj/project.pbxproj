@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A506FECEA6FAFE2001F7F055 /* Pods_FirebaseLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264EFAB9D774BAF44BD01C8 /* Pods_FirebaseLink.framework */; };
 		DC76DCE4298C7EFC004578F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76DCE3298C7EFC004578F2 /* HomeViewController.swift */; };
 		DC7BDE572992D6F2007D92BA /* FirebaseAnalytics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7BDE562992D6F2007D92BA /* FirebaseAnalytics.xcframework */; };
 		DC7BDE582992D6F2007D92BA /* FirebaseAnalytics.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC7BDE562992D6F2007D92BA /* FirebaseAnalytics.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -20,6 +19,7 @@
 		DCB56CA9298C1F0300BED88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB56CA7298C1F0300BED88E /* LaunchScreen.storyboard */; };
 		DCB56CB1298C253700BED88E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCB56CB0298C253700BED88E /* GoogleService-Info.plist */; };
 		DCB56CB4298C2BF300BED88E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DCB56CB3298C2BF300BED88E /* FirebaseAnalytics */; };
+		FED1978AD2093752E513B410 /* Pods_FirebaseLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A73C93F2CCCD343610C7E3 /* Pods_FirebaseLink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,8 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1264EFAB9D774BAF44BD01C8 /* Pods_FirebaseLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84D6FEA0A6C06096B73E8344 /* Pods-FirebaseLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLink.release.xcconfig"; path = "Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink.release.xcconfig"; sourceTree = "<group>"; };
+		7B18A3B0EE35535A6D6359AD /* Pods-FirebaseLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLink.release.xcconfig"; path = "Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink.release.xcconfig"; sourceTree = "<group>"; };
+		84A73C93F2CCCD343610C7E3 /* Pods_FirebaseLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76DCE3298C7EFC004578F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DC7BDE562992D6F2007D92BA /* FirebaseAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAnalytics.xcframework; path = Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.xcframework; sourceTree = "<group>"; };
 		DCB4565329938EF000B42FAF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		DCB56CA8298C1F0300BED88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCB56CAA298C1F0300BED88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCB56CB0298C253700BED88E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F7F4C7D556598F29DBC3E0B1 /* Pods-FirebaseLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLink.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink.debug.xcconfig"; sourceTree = "<group>"; };
+		EECED65086694D88C3084A4F /* Pods-FirebaseLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLink.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			files = (
 				DCB56CB4298C2BF300BED88E /* FirebaseAnalytics in Frameworks */,
 				DC7BDE572992D6F2007D92BA /* FirebaseAnalytics.xcframework in Frameworks */,
-				A506FECEA6FAFE2001F7F055 /* Pods_FirebaseLink.framework in Frameworks */,
+				FED1978AD2093752E513B410 /* Pods_FirebaseLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +71,8 @@
 		045546741D79B03C737BC6EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F7F4C7D556598F29DBC3E0B1 /* Pods-FirebaseLink.debug.xcconfig */,
-				84D6FEA0A6C06096B73E8344 /* Pods-FirebaseLink.release.xcconfig */,
+				EECED65086694D88C3084A4F /* Pods-FirebaseLink.debug.xcconfig */,
+				7B18A3B0EE35535A6D6359AD /* Pods-FirebaseLink.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				DC7BDE562992D6F2007D92BA /* FirebaseAnalytics.xcframework */,
-				1264EFAB9D774BAF44BD01C8 /* Pods_FirebaseLink.framework */,
+				84A73C93F2CCCD343610C7E3 /* Pods_FirebaseLink.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,11 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCB56CAD298C1F0300BED88E /* Build configuration list for PBXNativeTarget "FirebaseLink" */;
 			buildPhases = (
-				8FEADF987DE8776985DCBF98 /* [CP] Check Pods Manifest.lock */,
+				7A5D83A09A5226586F79457D /* [CP] Check Pods Manifest.lock */,
 				DCB56C95298C1F0100BED88E /* Sources */,
 				DCB56C96298C1F0100BED88E /* Frameworks */,
 				DCB56C97298C1F0100BED88E /* Resources */,
 				DC7BDE522992C591007D92BA /* Embed Frameworks */,
+				2105E7B11F91A1A64B68F537 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,7 +199,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8FEADF987DE8776985DCBF98 /* [CP] Check Pods Manifest.lock */ = {
+		2105E7B11F91A1A64B68F537 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseLink/Pods-FirebaseLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5D83A09A5226586F79457D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,7 +390,7 @@
 		};
 		DCB56CAE298C1F0300BED88E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7F4C7D556598F29DBC3E0B1 /* Pods-FirebaseLink.debug.xcconfig */;
+			baseConfigurationReference = EECED65086694D88C3084A4F /* Pods-FirebaseLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -402,7 +420,7 @@
 		};
 		DCB56CAF298C1F0300BED88E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84D6FEA0A6C06096B73E8344 /* Pods-FirebaseLink.release.xcconfig */;
+			baseConfigurationReference = 7B18A3B0EE35535A6D6359AD /* Pods-FirebaseLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

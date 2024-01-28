@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAnalytics
 import FirebaseAuth
 
+
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -28,7 +29,7 @@ class AuthViewController: UIViewController {
     @IBAction func signUpButtonAction(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwdTextField.text {
-            Auth.auth() .createUser(withEmail: email, password: password) {
+            Auth.auth().createUser(withEmail: email, password: password) {
                 (result, error) in
 
                 if let result = result, error == nil {
